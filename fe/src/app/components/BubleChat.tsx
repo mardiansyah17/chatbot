@@ -4,7 +4,7 @@ export default function BubleChat() {
             <div className="flex items-center mb-4 w-fit ">
                 <div className="flex-none flex flex-col items-center space-y-1 mr-4"></div>
                 <div className="flex-1 bg-primary text-white p-2 rounded-lg mb-2 relative">
-                    <div>PHP adalah singkatan dari "Hypertext Preprocessor." PHP adalah bahasa pemrograman skrip yang
+                    <div>PHP adalah singkatan dari PHP adalah bahasa pemrograman skrip yang
                         umumnya digunakan untuk pengembangan web. PHP bersifat open source, yang berarti kode sumbernya
                         dapat diakses dan dimodifikasi oleh siapa saja. Bahasa pemrograman ini dirancang khusus untuk
                         pengembangan aplikasi web dinamis dan dapat disematkan dalam HTML.
