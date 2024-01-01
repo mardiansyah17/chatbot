@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/chat', [ConversationController::class, 'chat']);
+Route::post('/chat', [ConversationController::class, 'chat']);
+Route::get('/chats', [ConversationController::class, 'getChat']);

@@ -1,7 +1,30 @@
+'use client'
+
 import {FaPaperPlane} from "react-icons/fa";
 import React from "react";
+import useChatStore from "@/app/lib/store/useChatStore";
+import {API_URL} from "@/app/lib/constant";
+import axios from "axios";
 
 export default function ChatInput() {
+
+    const [message, setMessage] = React.useState<string>('apa itu node js');
+    const {setChats} = useChatStore()
+    const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setChats({message, isQuestion: true, isAnswer: false})
+
+        const source = await axios.post(`${API_URL}/chat`, {
+            message
+
+        }).then((res) => {
+            setChats({message: res.data.message, isQuestion: false, isAnswer: true})
+
+        });
+
+
+    }
+
     return <form
         className="basis-[10%] border-t border-t-gray-200 p-3 flex items-center space-x-4 px-5"
         onSubmit={submitHandler}

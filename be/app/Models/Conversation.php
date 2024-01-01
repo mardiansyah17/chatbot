@@ -10,7 +10,8 @@ class Conversation extends Model
     use HasFactory;
 
     protected $fillable = [
-        'question',
-        'answer'
+        'message',
+        'isQuestion',
+        'isAnswer'
     ];
 }
