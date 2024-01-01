@@ -13,7 +13,7 @@ return [
     */
 
     'api_key' => env('OPENAI_API_KEY'),
-    'organization' => env('org-KwAGegTLh7gUM4A4OK7ZXSvI'),
+    'organization' => env('OPENAI_ORGANIZATION'),
 
     /*
     |--------------------------------------------------------------------------
