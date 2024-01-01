@@ -1,8 +1,8 @@
 'use client';
 import BubleChat from "@/app/components/BubleChat";
-import {FaPaperPlane} from "react-icons/fa";
 import React, {useEffect} from "react";
 import {API_URL} from "@/app/lib/constant";
+import ChatInput from "@/app/components/ChatInput";
 
 export default function Home() {
     const [message, setMessage] = React.useState<string>('apa itu node js');
@@ -32,21 +32,7 @@ export default function Home() {
                 <BubleChat/>
 
             </div>
-            <form
-                className="basis-[10%] border-t border-t-gray-200 p-3 flex items-center space-x-4 px-5"
-                onSubmit={submitHandler}
-            >
-                <input
-                    placeholder={"Masukan pesan anda"}
-                    type="text"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    className="outline-none border border-primary p-1 rounded-md active:border-primary w-full"
-                />
-                <button type="submit">
-                    <FaPaperPlane className="text-primary"/>
-                </button>
-            </form>
+            <ChatInput/>
         </div>
     )
 }
