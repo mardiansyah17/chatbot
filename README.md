@@ -4,6 +4,8 @@
 
 ## Jalankan peerintah di bawah
 
+`cd be`
+
 `composer install`
 
 `cp .env.example .env`
@@ -19,6 +21,8 @@
 ## buka terminal baru
 
 ## Jalankan peerintah di bawah
+
+`cd fe`
 
 `npm install`
 

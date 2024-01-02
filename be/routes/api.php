@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/chat', [ConversationController::class, 'chat']);
+Route::delete('/chat', [ConversationController::class, 'delete']);
 Route::get('/chats', [ConversationController::class, 'getChat']);

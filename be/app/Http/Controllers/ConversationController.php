@@ -55,4 +55,18 @@ class ConversationController extends Controller
             ], 500);
         }
     }
+
+    public function delete()
+    {
+        try {
+            Conversation::truncate();
+            return response()->json([
+                'message' => 'All chats deleted'
+            ], 200);
+        } catch (Exception $e) {
+            return response()->json([
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
 }

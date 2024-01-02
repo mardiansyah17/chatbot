@@ -4,6 +4,7 @@ interface ChatState {
     chats: IChat[];
     setChats: (chat: IChat) => void;
     loadChats: (chats: IChat[]) => void;
+    deleteChats: () => void;
 }
 
 const useChatStore = create<ChatState>((set) => ({
@@ -11,7 +12,8 @@ const useChatStore = create<ChatState>((set) => ({
     setChats: (chat: IChat) => {
         set((state) => ({chats: [...state.chats, chat]}));
     },
-    loadChats: (chats: IChat[]) => set({chats})
+    loadChats: (chats: IChat[]) => set({chats}),
+    deleteChats: () => set({chats: []}),
 }));
 
 export default useChatStore;
