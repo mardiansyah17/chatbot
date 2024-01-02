@@ -5,7 +5,7 @@ import BubleQuestion from "@/app/components/BubleQuestion";
 import BubleAnswer from "@/app/components/BubleAnswer";
 
 export default function Conversation({chatsData}: { chatsData: IChat[] }) {
-    const {loadChats, chats} = useChatStore()
+    const {loadChats, chats, isLoading} = useChatStore()
 
     useEffect(() => {
         // console.log(chatsData)
@@ -23,5 +23,7 @@ export default function Conversation({chatsData}: { chatsData: IChat[] }) {
                 }
             })
         }
+
+        {isLoading && <h1>Loading...</h1>}
     </div>)
 }

@@ -8,12 +8,13 @@ import axios from "axios";
 
 export default function ChatInput() {
 
-    const [message, setMessage] = React.useState<string>('apa itu node js');
-    const {setChats} = useChatStore()
+    const [message, setMessage] = React.useState<string>('');
+    const {setChats, setIsLoading} = useChatStore()
     const submitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setChats({message, isQuestion: true, isAnswer: false})
 
+        setChats({message, isQuestion: true, isAnswer: false})
+        setIsLoading(true)
         const source = await axios.post(`${API_URL}/chat`, {
             message
 
@@ -22,6 +23,7 @@ export default function ChatInput() {
 
         });
 
+        setIsLoading(false)
 
     }
 

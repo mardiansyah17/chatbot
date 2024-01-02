@@ -25,7 +25,7 @@ export default function Sidebar() {
             }  w-full sm:w-fit `}
         >
             <div className={`  w-80 h-full   bg-[#F0F0F0]  p-3 relative`}>
-                <FaXmark onClick={onClose} size={27} className={"absolute top-5 right-10 hidden md:block"}/>
+                <FaXmark onClick={onClose} size={27} className={"absolute top-5 right-10 block md:hidden"}/>
 
                 <div className={`mt-14`}>
                     <button
