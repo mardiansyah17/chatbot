@@ -16,7 +16,7 @@
 
 `php artisan serve`
 
-##### **Pastikan api key openai sudah diisi di file .env**
+##### **Pastikan api key openai sudah diisi di file .env saya tidak bisa memasukan api key di github**
 
 # Cara setup frontend
 
