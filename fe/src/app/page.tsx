@@ -17,7 +17,7 @@ export default async function Home() {
     const chats = await getChat()
     console.log(chats)
     return (
-        <div className="flex flex-col basis-full max-h-screen">
+        <div className="flex flex-col basis-full max-h-screen min-h-screen">
             <HeaderMobile/>
             <Conversation chatsData={chats}/>
             <ChatInput/>
