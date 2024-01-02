@@ -15,14 +15,14 @@ export default function ChatInput() {
 
         setChats({message, isQuestion: true, isAnswer: false})
         setIsLoading(true)
-        const source = await axios.post(`${API_URL}/chat`, {
+        await axios.post(`${API_URL}/chat`, {
             message
 
         }).then((res) => {
             setChats({message: res.data.message, isQuestion: false, isAnswer: true})
 
         });
-
+        setMessage('')
         setIsLoading(false)
 
     }

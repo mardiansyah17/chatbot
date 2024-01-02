@@ -16,6 +16,8 @@
 
 `php artisan serve`
 
+##### **Pastikan api key openai sudah diisi di file .env**
+
 # Cara setup frontend
 
 ## buka terminal baru
